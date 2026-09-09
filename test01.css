@@ -1,0 +1,46 @@
+.shape {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+
+.circle {
+    margin-top: 50px;
+    width: 200px;
+    height: 200px;
+    clip-path: circle(100px at 100px 100px);
+    background-color: blue;
+}
+
+.ellips {
+    margin-top: 50px;
+    width: 200px;
+    height: 200px;
+    clip-path: ellipse(100px 50px at 100px 100px);
+    background-color: green;
+}
+
+.inset {
+    margin-top: 50px;
+    width: 200px;
+    height: 200px;
+    clip-path: inset(20px 20px 20px 20px round 15px 0);
+    background-color: yellow;
+}
+
+.poligan {
+    margin-top: 50px;
+    width: 200px;
+    height: 200px;
+    /* for responsive clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%); */
+    clip-path: polygon(100% 50%, 75% 100%, 0 100%, 25% 50%, 0 0, 75% 0);
+    background-color: purple;
+}
+
+.path{
+    margin-top: 50px;
+    width: 200px;
+    height: 200px;
+    clip-path: path("M 10,40 L 70,40 A 10,10 0,0,0 80, 30 L 80,10 A 10,10 0,0,1 90, 0 L 140,0 A 10,10 0,0,1 150, 10 L 150,190 A 10,10 0,0,1 140,200 L 10,200 A 10,10 0,0,1 0,190 L 0,50 A 10,10 0,0,1 10,40  Z");
+    background-color: orange;
+}
