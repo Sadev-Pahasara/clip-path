@@ -37,6 +37,14 @@
     background-color: purple;
 }
 
+.poligantwo {
+    margin-top: 50px;
+    width: 200px;
+    height: 200px;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
+    background-color: rgb(21, 173, 51);
+}
+
 .path{
     margin-top: 50px;
     width: 200px;
