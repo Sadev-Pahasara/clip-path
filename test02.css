@@ -1,7 +1,12 @@
-
 body{
     background: #1a1a1a;
 }
+
+.one{
+    height: 100vh;
+    background: #993636;
+}
+
 .textreveal {
     margin-top: 50px;
     display: flex;
@@ -10,9 +15,16 @@ body{
 }
 
 h1{
+    position: relative; /* ADD THIS */
+
     font-size: 3rem;
     color: white;
     font-family: sans-serif;
+}
+
+
+/* TEXT ANIMATION */
+h1.animate{
     animation: textanimation 0.9s cubic-bezier(0, 0, 0.2, 1) both;
     animation-iteration-count: 1;
 }
@@ -26,17 +38,27 @@ h1{
     }
 }
 
+
+/* RED OVERLAY */
 h1:after{
     content: '';
     position: absolute;
     z-index: 1;
+
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+
     background-color: #ff174b;
+
     transform: scaleX(0);
     transform-origin: 0 50%;
+}
+
+
+/* RED ANIMATION */
+h1.animate:after{
     animation: textReveal 1s cubic-bezier(0, 0, 0.2, 1) both;
     animation-iteration-count: 1;
 }
