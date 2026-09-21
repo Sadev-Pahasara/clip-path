@@ -1,3 +1,8 @@
+body{
+    
+    background: #1a1a1a;
+}
+
 .shape {
     width: 200px;
     height: 200px;
@@ -167,3 +172,4 @@
     }
 
 }
+
