@@ -180,14 +180,14 @@ body{
     animation: glow 1s ease-in-out infinite alternate;
 }
 
-/* @keyframes glow {
+@keyframes glow {
     from {
       text-shadow: 0 0 20px #00aaff;
     }
     to {
       text-shadow: 0 0 30px #00aaff, 0 0 10px #00aaff;
     }
-  } */
+  }
 
 
 .txt2 {
