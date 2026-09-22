@@ -173,3 +173,128 @@ body{
 
 }
 
+.txt1 {
+    color: white;
+    font-size: 1rem;
+    margin-top: 10px;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+/* @keyframes glow {
+    from {
+      text-shadow: 0 0 20px #00aaff;
+    }
+    to {
+      text-shadow: 0 0 30px #00aaff, 0 0 10px #00aaff;
+    }
+  } */
+
+
+.txt2 {
+    color: white;
+    font-size: 1rem;
+    margin-top: 10px;
+    animation: itemspawn 0.5s ease-out;
+}
+
+ @keyframes itemspawn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+.txt3 {
+    color: white;
+    font-size: 1rem;
+    margin-top: 10px;
+    animation: Loading 2s infinite;
+}
+
+  @keyframes Loading {
+  10% {
+    content: "Connecting";
+  }
+  30% {
+    content: "Connecting .";
+  }
+  50% {
+    content: "Connecting ..";
+  }
+  70% {
+    content: "Connecting ...";
+  }
+  100% {
+    content: "Connecting ....";
+  }
+}
+
+.txt4 {
+    color: white;
+    font-size: 1rem;
+    margin-top: 10px;
+    animation: fadeInOut 2s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  from {
+    transition: 2s;
+    opacity: 0.1;
+  }
+  to {
+    transition: 2s;
+    opacity: 1;
+  }
+}
+
+.txt5 {
+    color: white;
+    font-size: 1rem;
+    margin-top: 10px;
+    animation: Shake 0.5s ease-in-out infinite;
+}
+
+/* @keyframes Shake {
+  from {
+    transform: rotate(10deg);
+  }
+  to {
+    transform: rotate(-10deg);
+  }
+} */
+
+.txt6 {
+    color: white;
+    font-size: 1rem;
+    margin-top: 10px;
+    animation: textanim 1s ease-in-out;
+}
+
+@keyframes textanim {
+    from {
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+
+  .txt7 {
+    color: white;
+    font-size: 1rem;
+    margin-top: 10px;
+    animation: cardspawn 1s ease-in-out;
+}
+
+@keyframes cardspawn {
+    from {
+      transform: translateY(300px);
+      opacity: 0;
+    }
+    to{
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
