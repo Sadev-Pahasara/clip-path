@@ -2,6 +2,10 @@ body{
     background: #1a1a1a;
 }
 
+body::-webkit-scrollbar{
+    display: none;
+}
+
 .one{
     height: 100vh;
     background: #993636;
@@ -14,17 +18,15 @@ body{
     align-items: center;
 }
 
-h1{
-    position: relative; /* ADD THIS */
-
+.textreveal h1{
+    position: relative;
     font-size: 3rem;
     color: white;
     font-family: sans-serif;
 }
 
 
-/* TEXT ANIMATION */
-h1.animate{
+.textreveal h1.animate{
     animation: textanimation 0.9s cubic-bezier(0, 0, 0.2, 1) both;
     animation-iteration-count: 1;
 }
@@ -40,7 +42,7 @@ h1.animate{
 
 
 /* RED OVERLAY */
-h1:after{
+.textreveal h1:after{
     content: '';
     position: absolute;
     z-index: 1;
@@ -58,7 +60,7 @@ h1:after{
 
 
 /* RED ANIMATION */
-h1.animate:after{
+.textreveal h1.animate:after{
     animation: textReveal 1s cubic-bezier(0, 0, 0.2, 1) both;
     animation-iteration-count: 1;
 }
@@ -79,4 +81,124 @@ h1.animate:after{
     100% {
         transform: scaleX(0);
     }
+}
+
+.animatonone h1{
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+    animation: wave 4s ease-in-out infinite;
+}
+
+@keyframes wave {
+    0% , 100%{
+        transform:  translateY(0px)     rotate(0deg);
+    }
+    25%{
+        transform:  translateY(-8px)    rotate(-1deg);
+    }
+    50%{
+        transform:  translateY(-4px)     rotate(0deg);
+    }
+    75%{
+        transform:  translateY(-8px)     rotate(1deg);
+    }
+}
+
+.animatontwo h1{
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+    animation: float-water 4s ease-in-out infinite;
+}
+
+@keyframes float-water {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-8px) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(-4px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+.animatonthree img{
+    margin-left: 45%;
+    min-width: 100px;
+    max-width: 350px;
+    animation: trigger 1s ease-in-out;
+    animation-iteration-count: 1;
+}
+
+@keyframes trigger {
+    0%{
+    fill-opacity: 0.5;
+    }
+    100%{
+        fill-opacity: 1;
+    }
+}
+
+
+
+.animatonfive img{
+    margin-left: 45%;
+    min-width: 100px;
+    max-width: 350px;
+    transition: all 1s ease;
+}
+
+.animatonfive img:hover{
+    rotate: 360deg;
+    scale: 1.1;
+}
+
+.animatonsix img{
+    margin-left: 45%;
+    min-width: 100px;
+    max-width: 350px;
+}
+
+.animatonsix img :hover{
+    transition: rotations 4s ease-in-out;
+}
+
+@keyframes rotations{
+    0%, 100%{
+        
+    }
+}
+
+.animatonfour{
+    display: flex;
+    flex-direction: row;
+}
+
+.animatonfour .details {
+    color: white;
+    margin-left: 70px;
+    transform: translateX(50%) translateY(05%);
+}
+
+.animatonfour .details h1{
+    font-size: 3rem;
+    
+}
+
+.animatonfour img{
+    margin-left: 45%;
+    min-width: 100px;
+    max-width: 350px;
+    transition: all 0.5s ease-in-out;
+}
+
+.animatonfour img:hover{
+    filter: blur(2px);
+    rotate: 90deg;
+    scale: 1.1;
 }
