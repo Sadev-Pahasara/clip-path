@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #050505;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* =========================================
+   SCROLL PROGRESS BAR
+========================================= */
+
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 4px;
+
+    background: rgb(62, 62, 62);
+
+    z-index: 9999;
+
+    animation: scrollProgress linear;
+    animation-timeline: scroll(root);
+}
+
+/* Animation follows entire page scroll */
+
+@keyframes scrollProgress {
+
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background: #050505;
+}
+
+.hero h1 {
+    font-size: clamp(50px, 8vw, 120px);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #888;
+    font-size: 18px;
+}
+
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.section {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 80px 20px;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.content {
+    width: min(800px, 100%);
+
+    text-align: center;
+
+    opacity: 0;
+    transform: translateY(100px) scale(0.9);
+
+    /*
+        The animation is controlled by
+        the element's position in the viewport.
+    */
+
+    animation: reveal linear both;
+
+    animation-timeline: view();
+
+    /*
+        Start animation when element enters.
+    */
+
+    animation-range: entry 10% cover 40%;
+}
+
+
+.content span {
+    display: block;
+
+    font-size: 14px;
+    letter-spacing: 5px;
+
+    color: #777;
+
+    margin-bottom: 20px;
+}
+
+.content h2 {
+    font-size: clamp(40px, 6vw, 80px);
+
+    margin-bottom: 20px;
+}
+
+.content p {
+    max-width: 600px;
+
+    margin: auto;
+
+    color: #888;
+
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   REVEAL ANIMATION
+========================================= */
+
+@keyframes reveal {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(100px)
+            scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* =========================================
+   LAST SECTION
+========================================= */
+
+.last-section {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.last-section h2 {
+    font-size: 100px;
+}
