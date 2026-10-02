@@ -1,1 +1,1 @@
-training ex
+training Exercise 
