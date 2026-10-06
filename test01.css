@@ -314,3 +314,23 @@ body{
       opacity: 1;
     }
   }
+
+
+  .masked-title {
+  display: inline-block;
+
+  -webkit-mask-image: url("src/mask23.jpg");
+  mask-image: url("src/mask23.jpg");
+
+  -webkit-mask-size: 200% 100%;
+  mask-size: 200% 100%;
+
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+
+  -webkit-mask-position: 100% 50%;
+  mask-position: 100% 50%;
+
+  -webkit-mask-mode: luminance;
+  mask-mode: luminance;
+}
