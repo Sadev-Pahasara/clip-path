@@ -1,20 +1,25 @@
-gsap.registerPlugin(ScrollTrigger);
+document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".reveal");
 
-gsap.fromTo(
-  ".masked-title",
-  {
-    maskPosition: "100% 50%",
-    webkitMaskPosition: "100% 50%"
-  },
-  {
-    maskPosition: "0% 50%",
-    webkitMaskPosition: "0% 50%",
-    duration: 1.5,
-    ease: "power3.inOut",
-    scrollTrigger: {
-      trigger: ".masked-title",
-      start: "top 80%",
-      once: true
-    }
-  }
-);
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-visible");
+
+                    // Remove this line if you want the animation
+                    // to replay every time the element enters view.
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        {
+            threshold: 0.15,
+            rootMargin: "0px 0px -40px 0px"
+        }
+    );
+
+    elements.forEach((element) => {
+        observer.observe(element);
+    });
+});
